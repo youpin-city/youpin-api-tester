@@ -1,0 +1,30 @@
+{
+  "categories": ["pedestrain", "หาบเร่"],
+  "created_time": "6/12/2016, 6:29 PM",
+  "detail": "afjaldfja;dkfja;jfal;sjdf;aksjdf;daj",
+  "followers": ["5784c13a42048a9b2d52f66f", "5784c15342048a9b2d52f670"],
+  "level": "severe",
+  "mentions": ["5784c15342048a9b2d52f670"],
+  "neighborhood": "Silom",
+  "provider":"5784c13a42048a9b2d52f66f",
+  "owner": "5784c13a42048a9b2d52f66f",
+  "photos": ["5783c2ad7444a96e06c04902", "5783c2ad7444a96e06c04907"],
+  "status": "open",
+  "tags": ["tag1","tag2"],
+  "title": "broken pedestrain near SamYan",
+  "updated_time": "6/12/2016, 6:29 PM",
+  "videos": ["5783c2ad7444a96e06c04999"],
+  "voters": [
+  {"user_id": "5784c15342048a9b2d52f670","vote_type": "love"},
+  {"user_id": "5784c13a42048a9b2d52f66f", "vote_type": "angry"}
+  ],
+  "location": [10, 10],
+  "comments": [
+      { "commented_by": "5784c13a42048a9b2d52f66f",
+        "detail": "Good. I like it!",
+        "mentions": ["5784c13a42048a9b2d52f66f"],
+        "photos": ["photo1","photo2"],
+        "tags": ["agree"],
+        "voter": [{"user_id": "5784c15342048a9b2d52f670", "vote_type": "love"}]
+        }]
+}
