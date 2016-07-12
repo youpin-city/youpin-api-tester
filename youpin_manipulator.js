@@ -20,21 +20,35 @@ if (!uriValue) {
   console.log('no <uri> given');
   process.exit(1);
 }
+var doAuth = false;
 
 switch(program.method) {
-  case 'postPin': {
-    const pinData = require(program.file);
-    api(uriValue).postPin(pinData, function(body) {
-      console.log(body);
-    });
-  } break;
-  case 'postUser': {
-    const userData = require(program.file);
-    api(uriValue).postUser(userData, function(body) {
-      console.log(body);
-    });
-  } break;
-  default: {
-    console.log('Default');
+  case 'getUser': {
+    doAuth = true;
+  }; break;
+  default: doAuth = false;
+};
+new api(uriValue, doAuth).then(function(agent) {
+  switch(program.method) {
+    case 'postPin': {
+      const pinData = require(program.file);
+      agent.postPin(pinData, function(body) {
+        console.log(body);
+      });
+    } break;
+    case 'postUser': {
+      const userData = require(program.file);
+      agent.postUser(userData, function(body) {
+        console.log(body);
+      })
+    } break;
+    case 'getUser': {
+      agent.getUser(function(body) {
+        console.log(body);
+      });
+    } break;
+    default: {
+      console.log('Default');
+    }
   }
-}
+});

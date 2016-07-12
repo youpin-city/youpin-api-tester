@@ -4,6 +4,11 @@
   "description": "tester for api",
   "main": "index.js",
   "dependencies": {
+    "feathers": "^2.0.1",
+    "feathers-authentication": "^0.7.9",
+    "feathers-hooks": "^1.5.4",
+    "feathers-localstorage": "^0.4.1",
+    "feathers-rest": "^1.4.2",
     "request": "^2.72.0"
   },
   "devDependencies": {},
