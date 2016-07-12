@@ -1,0 +1,23 @@
+{
+  "name": "youpin-api-tester",
+  "version": "1.0.0",
+  "description": "tester for api",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youpin-city/youpin-api-tester.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youpin-city/youpin-api-tester/issues"
+  },
+  "homepage": "https://github.com/youpin-city/youpin-api-tester#readme"
+}
