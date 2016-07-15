@@ -23,6 +23,7 @@ if (!uriValue) {
 var doAuth = false;
 
 switch(program.method) {
+  case 'postPin': {}
   case 'getUser': {
     doAuth = true;
   }; break;
@@ -47,6 +48,12 @@ new api(uriValue, doAuth).then(function(agent) {
         console.log(body);
       });
     } break;
+    case 'createApp3rd': {
+      const appData = require(program.file);
+      agent.createApp3rd(appData, function(body) {
+        console.log(body);
+      });
+    }
     default: {
       console.log('Default');
     }

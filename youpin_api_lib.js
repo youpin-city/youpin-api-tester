@@ -18,8 +18,8 @@ class Api {
       if(doAuth) {
         app.authenticate({
           type: 'local',
-          'email': 'theeraphol.wat@gmail.com',
-          'password': 'theeraphol.wat'
+          'email': 'contact@youpin.city',
+          'password': ''
         }).then(result => {
           this.token = app.get('token');
           resolve(this);
@@ -65,11 +65,27 @@ class Api {
     console.log('Post pin...');
     request
       .post(this.uri + '/pins')
+      .set('Authorization', 'Bearer ' + this.token)
       .send(json)
       .end(function(err, resp) {
         if (err || !resp.ok) {
           console.log('Unable to post pin');
           //console.log(resp);
+          console.log(err);
+          return;
+        }
+        return callback(resp.body);
+      });
+  }
+
+  createApp3rd(json, callback) {
+    console.log('Create 3rd party app...');
+    request
+      .post(this.uri + '/app3rds')
+      .send(json)
+      .end(function(err, resp) {
+        if (err || !resp.ok) {
+          console.log('Unable to create 3rd app');
           console.log(err);
           return;
         }
