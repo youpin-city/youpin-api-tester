@@ -1,6 +1,8 @@
 {
   "detail": "whatever",
-  "owner": "578550a6b3e8a8e9adc78df1",
-  "provider": "5784c13a42048a9b2d52f66f",
-  "location": [10.733626, 10.5253153]
+  "owner": "57875b29579a3a7a4ab19497",
+  "provider": "57875b29579a3a7a4ab19497",
+  "location": {
+    "coordinates":[10.733626, 10.5253153]
+  }
 }
